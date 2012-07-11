@@ -1,4 +1,4 @@
-spendingdata.org: A data standard for transaction-level spending data
+spendingdata.org: A standard for transaction-level spending data
 =====================================================================
 
 This repository contains a specification for the data standard. It is
