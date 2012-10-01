@@ -1,7 +1,14 @@
 ---
 layout: standard
-title: Scope of the Proposal
+title: Technical Specification
 ---
+
+The primary goal of this specification is to be **useful**: we want to offer a format that can 
+be easily generated from commonly-used financial management systems and, most of all, a format 
+that helps by end-users - whether they are tech-literate developers or data journalists whose
+skills may be very limited.
+
+A good example for a **pragmatic specification** is the [General Transit Feed Specification](https://developers.google.com/transit/gtfs/reference) by Google, which is widely used to share timetable and route information between public transport providers and data re-users (originally Google Maps).
 
 <h3>What is transactional spending data?</h3>
 
@@ -19,7 +26,6 @@ The standard will combine two parts: the **core specification** and additional *
 
 * Container format for dataset packaging
 * Instructions on the use of CSV (RFC 4180)
-* A [simplified version of DSPL](https://github.com/nickstenning/dspljson) to be used for the expression of metadata, as well as a specification of any additional metadata fields that may be required (in particular: geographic, temporal and domain coverage)
 * Best practices regarding publication form, interval and licensing.
 
 <h3>What initial concepts/modules should there be?</h3>
@@ -28,7 +34,6 @@ The standard will combine two parts: the **core specification** and additional *
 * **Entities, such as corporate and other suppliers, public bodies and government divisions need to be assigned unique identifiers (URIs)**. While [freely usable identifiers for companies](http://opencorporates.com/) are beginning to be available, for other entities such reference data is missing. We'll provide guidance on the coinage of identifiers and attempt to link to relevant databases.
 * Support for **geographic identifiers**, both in terms of precise location (i.e. geocoding) and specifying administrative regions to which funds have been allocated. 
 * **Procurement and awards data** describing the process in which the funds were allocated, as well as the **contractual terms** covering the expenditure. 
-
 
 <h3>What other modules should there be?</h3>
 
@@ -40,3 +45,19 @@ Of course, the information expressed in these core modules is just a part of the
 <h3>Does the standard cover legal aspects?</h3>
 
 The standard does not contain a direct legal component, but governments and organisations that release data in the specified format must also supply a license which is in accordance with the [open definition](http://opendefinition.org/) and thus enables free and non-discriminatory re-use of the information.
+
+<h3>What are the components of the technical specification?</h3>
+
+The specification will contain two parts: the **core specification** and additional **modules**. The core will include instructions on the packaging of spending datasets to combine data and metadata, a minimal set of required metadata attributes and a modeling system in which modules can be expressed. The modules themselves will specify and document well-known DSPL concept which can then be re-used across different datasets.
+
+<h3>What file formats are used?</h3>
+
+The format will be **[Comma Separated Values (CSV)](http://tools.ietf.org/html/rfc4180) for the data and [JavaScript Object Notation (JSON)](http://json.org/) for metadata**. The deciding argument for CSV is its universal tool support, both for export from all major databases and import into common tools, such as spreadsheet applications. Data and metadata documents will be **combined into a Zipfile container**.
+
+<h3>How is metadata represented?</h3>
+
+We're planning to use a [simple metadata dictionary](http://www.dataprotocols.org/en/latest/data-packages.html#metadata). 
+
+<h3>Open Issues</h3>
+
+* **Currency conversion**: do we want to specify a base currency (e.g. 2000 US Dollars or SDR) in which fact table data will be provided?

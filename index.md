@@ -9,12 +9,6 @@ title: A data standard for transaction-level spending data
     data.        
 </p>
 
-<div class="alert">
-    <strong>This document is an early draft.</strong> It is mainly intended as a
-    basis for discussion. If you want to support us or disagree with its contents, please 
-    <a href="contribute.html">get in touch</a>.
-</div>
-
 <h3>Why now?</h3>
 <p>The release of transaction-level data (i.e. information about individual disbursements or contract spending) is a relatively new idea, compared to the release of higher-level accounting information or budget overviews. The availability of such data allows for fine-grained analysis and oversight of activities and will, in the future, enable anyone inside or outside of government to reconstruct key reports from raw data. In order to perform these types of analysis, it is often necessary to combine spending information from several sources - either for completeness or comparison.</p>
 
