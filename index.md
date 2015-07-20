@@ -1,6 +1,7 @@
 ---
 layout: standard
 title: A data standard for transaction-level spending data
+redirect_from: /research/standard/
 ---
 
 <p>
